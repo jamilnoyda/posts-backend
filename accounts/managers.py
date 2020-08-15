@@ -1,8 +1,8 @@
 from django.contrib.auth.models import BaseUserManager
 from django.db import transaction
 
-
-class UserManager(BaseUserManager):
+from softdelete.managers import SoftDeleteManager
+class UserManager(BaseUserManager,SoftDeleteManager):
     def _create_user(self, email, password, **extra_fields):
         """
         Creates and saves a User with the given email,and password.

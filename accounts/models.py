@@ -13,7 +13,9 @@ from accounts.managers import UserManager
 from django.utils import timezone
 
 
-class User(AbstractBaseUser, PermissionsMixin):
+
+from softdelete.models import SoftDeleteModel
+class User(AbstractBaseUser, PermissionsMixin,SoftDeleteModel):
     """
     An abstract base class implementing a fully featured User.
     """
@@ -25,12 +27,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
+
+
     
 
 
     created_at=models.DateTimeField(auto_now_add=True,editable=False)
     updated_at=models.DateTimeField(auto_now=True,editable=False)
-    is_deleted=models.BooleanField(default=False)
+    
 
 
     bio = models.TextField(max_length=500, blank=True, null=True)
@@ -48,7 +52,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
-class Profile(models.Model):
+class Profile(SoftDeleteModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -60,7 +64,7 @@ class Profile(models.Model):
     phone_number = models.CharField(max_length=17, blank=True)
     created_at=models.DateTimeField(auto_now_add=True,editable=False)
     updated_at=models.DateTimeField(auto_now=True,editable=False)
-    is_deleted=models.BooleanField(default=False)
+    
 
 
     def __str__(self):
