@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+posts_backend/__pycache__/settings.cpython-38.pyc
+posts_backend/__pycache__/settings.cpython-38.pyc
