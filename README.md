@@ -22,3 +22,7 @@ Finally, run the development server:
 python manage.py runserver
 
 The project will be available at 127.0.0.1:8000.
+
+
+  python 3.8
+  django 3.x
