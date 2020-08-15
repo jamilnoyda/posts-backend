@@ -1,0 +1,7 @@
+curl --location --request POST 'http://127.0.0.1:8000/accounts/api-token-auth/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username":"jamilnoyda@gmail.com",
+    "password":"hellohello"
+}'
+
