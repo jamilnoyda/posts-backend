@@ -5,3 +5,20 @@ curl --location --request POST 'http://127.0.0.1:8000/accounts/api-token-auth/' 
     "password":"hellohello"
 }'
 
+
+
+
+curl -X POST -d "grant_type=password&username=jamilnoyda@gmail.com&password=hellohello" -u "JAWXqwGRvHmBudSO8holMLZzLQLHwH6n5rFAIO3C:ZQaRNCZoxGmWvHQDt0tg1W1Qoo1BWB0DvO7ygC09zPS68vRmGIcjc3PGcfmjeDT77kkXmLOn3CAx3QvsPw7TkHqtZa95wQc4FqdAX0BeRApmMvPY1YwUzaIslKqaZIxl" http://localhost:8000/o/token/
+
+
+curl -H "Authorization: Bearer 6suQgkwNdHmYP5YsdBA5IB32MO7KFW" http://localhost:8000/groups/
+
+
+
+
+curl --location --request POST 'http://localhost:8000/o/token/' \
+--header 'Authorization: Basic SkFXWHF3R1J2SG1CdWRTTzhob2xNTFp6TFFMSHdINm41ckZBSU8zQzpaUWFSTkNab3hHbVd2SFFEdDB0ZzFXMVFvbzFCV0IwRHZPN3lnQzA5elBTNjh2Um1HSWNqYzNQR2NmbWplRFQ3N2trWG1MT24zQ0F4M1F2c1B3N1RrSHF0WmE5NXdRYzRGcWRBWDBCZVJBcG1NdlBZMVl3VXphSXNsS3FhWkl4bA==' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=password' \
+--data-urlencode 'username=jamilnoyda@gmail.com' \
+--data-urlencode 'password=hellohello'

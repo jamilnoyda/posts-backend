@@ -11,6 +11,6 @@ app_name = "accounts"
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path("api-token-auth/", views.obtain_auth_token),
+    # path("api-token-auth/", views.obtain_auth_token),
     path("", include(router.urls,)),
 ]

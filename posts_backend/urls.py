@@ -16,10 +16,48 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
+
+
+
+
+from django.urls import path, include
+from django.contrib.auth.models import  Group
+from accounts.models import User
+from django.contrib import admin
+admin.autodiscover()
+
+from rest_framework import generics, permissions, serializers
+
+from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
+
+# first we define the serializers
+
+# Create the API views
+# class UserList(generics.ListCreateAPIView):
+#     permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
+
+# class UserDetails(generics.RetrieveAPIView):
+#     permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
+
+# class GroupList(generics.ListAPIView):
+#     permission_classes = [permissions.IsAuthenticated, TokenHasScope]
+#     required_scopes = ['groups']
+#     queryset = Group.objects.all()
+#     serializer_class = GroupSerializer
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls", namespace="accounts")),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 
+    # path('users/', UserList.as_view()),
+    # path('users/<pk>/', UserDetails.as_view()),
+    # path('groups/', GroupList.as_view()),
 ]

@@ -29,3 +29,11 @@ The project will be available at 127.0.0.1:8000.
 
 
 python manage.py dumpdata --format=json > fixtures/data.json 
+
+
+
+
+add exmaple of curl in this file
+
+
+curl -H "Authorization: Bearer 6suQgkwNdHmYP5YsdBA5IB32MO7KFW" http://localhost:8000/groups/
