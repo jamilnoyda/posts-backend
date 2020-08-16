@@ -12,6 +12,5 @@ app_name = "accounts"
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path("api-token-auth/", views.obtain_auth_token),
-    # path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("", include(router.urls,)),
 ]

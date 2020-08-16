@@ -1,5 +1,31 @@
 [
     {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2020-08-15T11:02:11.176Z",
+            "user": "c4d8fa0e-7863-49e9-a2af-82cf6c7fe9c7",
+            "content_type": 6,
+            "object_id": "e32eb67d-e03d-42d2-aeba-8135e5bed1e7",
+            "object_repr": "jamilnoyda10@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2020-08-16T06:15:13.126Z",
+            "user": "c4d8fa0e-7863-49e9-a2af-82cf6c7fe9c7",
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Frontend",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
         "model": "auth.permission",
         "pk": 1,
         "fields": {
@@ -252,6 +278,186 @@
         }
     },
     {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add Token",
+            "content_type": 8,
+            "codename": "add_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change Token",
+            "content_type": 8,
+            "codename": "change_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete Token",
+            "content_type": 8,
+            "codename": "delete_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view Token",
+            "content_type": 8,
+            "codename": "view_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add application",
+            "content_type": 9,
+            "codename": "add_application"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change application",
+            "content_type": 9,
+            "codename": "change_application"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete application",
+            "content_type": 9,
+            "codename": "delete_application"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view application",
+            "content_type": 9,
+            "codename": "view_application"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add access token",
+            "content_type": 10,
+            "codename": "add_accesstoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change access token",
+            "content_type": 10,
+            "codename": "change_accesstoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete access token",
+            "content_type": 10,
+            "codename": "delete_accesstoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view access token",
+            "content_type": 10,
+            "codename": "view_accesstoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add grant",
+            "content_type": 11,
+            "codename": "add_grant"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change grant",
+            "content_type": 11,
+            "codename": "change_grant"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete grant",
+            "content_type": 11,
+            "codename": "delete_grant"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view grant",
+            "content_type": 11,
+            "codename": "view_grant"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add refresh token",
+            "content_type": 12,
+            "codename": "add_refreshtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change refresh token",
+            "content_type": 12,
+            "codename": "change_refreshtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete refresh token",
+            "content_type": 12,
+            "codename": "delete_refreshtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view refresh token",
+            "content_type": 12,
+            "codename": "view_refreshtoken"
+        }
+    },
+    {
         "model": "contenttypes.contenttype",
         "pk": 1,
         "fields": {
@@ -308,11 +514,75 @@
         }
     },
     {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "authtoken",
+            "model": "token"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "oauth2_provider",
+            "model": "application"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "oauth2_provider",
+            "model": "accesstoken"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "oauth2_provider",
+            "model": "grant"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "oauth2_provider",
+            "model": "refreshtoken"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "8dkujqo00f9tt25d0ig9cbbay4qoyg0y",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlv-JF4vJT1niNbrNQmgRMqnQtwdIqWA7kkz816qo23tu22RuRuKOituSqpkRUOKQTcoqMlT1clzjQxVkEGdfrNM_JBxb8udxttkeBrXechmV8xBF3Odijwvh_t30NPSf2shcAGjpSQulApcnFB1FhJ6psxcg9g2IniS1hZAhCbmxPvIlJJ6fwB28EIP:1k79ry:-nIhSpPaSv9Wp4DSCuTAayQvcnmzYSNeDakMl05UZxs",
+            "expire_date": "2020-08-30T04:02:06.088Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "qm95wtvckdy5tmn3ubjtg7ill9kk1ud8",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlv-JF4vJT1niNbrNQmgRMqnQtwdIqWA7kkz816qo23tu22RuRuKOituSqpkRUOKQTcoqMlT1clzjQxVkEGdfrNM_JBxb8udxttkeBrXechmV8xBF3Odijwvh_t30NPSf2shcAGjpSQulApcnFB1FhJ6psxcg9g2IniS1hZAhCbmxPvIlJJ6fwB28EIP:1k7Bsc:VXNXBTQaE71_VyMNtNo8HvIFNkiiJ0et3BJyoArF4ho",
+            "expire_date": "2020-08-30T06:10:54.585Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "za1jxtmnair5nljqrm5kfjfjmdnxtsnw",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlv-JF4vJT1niNbrNQmgRMqnQtwdIqWA7kkz816qo23tu22RuRuKOituSqpkRUOKQTcoqMlT1clzjQxVkEGdfrNM_JBxb8udxttkeBrXechmV8xBF3Odijwvh_t30NPSf2shcAGjpSQulApcnFB1FhJ6psxcg9g2IniS1hZAhCbmxPvIlJJ6fwB28EIP:1k7Bov:imuPIgx5aXZGgQShumhqgHRqML9rAqSBX63LPe9wxyE",
+            "expire_date": "2020-08-30T06:07:05.609Z"
+        }
+    },
+    {
         "model": "accounts.user",
         "pk": "c4d8fa0e-7863-49e9-a2af-82cf6c7fe9c7",
         "fields": {
             "password": "pbkdf2_sha256$216000$icnsVw7bxDz1$vOr2U/bjYEC8RzZta6zhdS7dUq7FPA6Jiw/H9HIOGcU=",
-            "last_login": null,
+            "last_login": "2020-08-16T06:10:53.804Z",
             "is_superuser": true,
             "deleted_at": null,
             "email": "jamilnoyda@gmail.com",
@@ -329,6 +599,27 @@
         }
     },
     {
+        "model": "accounts.user",
+        "pk": "e32eb67d-e03d-42d2-aeba-8135e5bed1e7",
+        "fields": {
+            "password": "hellohello",
+            "last_login": "2020-08-15T11:01:50Z",
+            "is_superuser": false,
+            "deleted_at": null,
+            "email": "jamilnoyda10@gmail.com",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_staff": false,
+            "date_joined": "2020-08-15T11:01:41Z",
+            "created_at": "2020-08-15T11:02:11.170Z",
+            "updated_at": "2020-08-15T11:02:11.170Z",
+            "bio": "fdsf",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
         "model": "accounts.profile",
         "pk": "42f41999-703a-4f45-ba17-702c6f3dcfe8",
         "fields": {
@@ -339,7 +630,37 @@
             "gender": "",
             "phone_number": "",
             "created_at": "2020-08-15T10:50:40.814Z",
-            "updated_at": "2020-08-15T10:50:40.814Z"
+            "updated_at": "2020-08-16T06:10:54.446Z"
+        }
+    },
+    {
+        "model": "accounts.profile",
+        "pk": "b1059468-a458-4e6d-9866-b7c6ca9b3577",
+        "fields": {
+            "deleted_at": null,
+            "user": "e32eb67d-e03d-42d2-aeba-8135e5bed1e7",
+            "full_name": "",
+            "birth_date": null,
+            "gender": "",
+            "phone_number": "",
+            "created_at": "2020-08-15T11:02:11.171Z",
+            "updated_at": "2020-08-15T11:02:11.172Z"
+        }
+    },
+    {
+        "model": "oauth2_provider.application",
+        "pk": 1,
+        "fields": {
+            "client_id": "JAWXqwGRvHmBudSO8holMLZzLQLHwH6n5rFAIO3C",
+            "user": null,
+            "redirect_uris": "",
+            "client_type": "confidential",
+            "authorization_grant_type": "password",
+            "client_secret": "ZQaRNCZoxGmWvHQDt0tg1W1Qoo1BWB0DvO7ygC09zPS68vRmGIcjc3PGcfmjeDT77kkXmLOn3CAx3QvsPw7TkHqtZa95wQc4FqdAX0BeRApmMvPY1YwUzaIslKqaZIxl",
+            "name": "Frontend",
+            "skip_authorization": false,
+            "created": "2020-08-16T06:15:13.125Z",
+            "updated": "2020-08-16T06:15:13.125Z"
         }
     }
 ]
