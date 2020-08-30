@@ -19,7 +19,7 @@ class User(AbstractBaseUser, PermissionsMixin,SoftDeleteModel):
     """
     An abstract base class implementing a fully featured User.
     """
-    id = models.UUIDField(primary_key=True,unique=True, default=uuid.uuid4, editable=False)
+    # id = models.UUIDField(primary_key=True,unique=True, default=uuid.uuid4, editable=False)
 
     email = models.EmailField(max_length=40, unique=True)
     first_name = models.CharField(max_length=30, blank=True)
@@ -53,7 +53,7 @@ class User(AbstractBaseUser, PermissionsMixin,SoftDeleteModel):
 
 
 class Profile(SoftDeleteModel):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    # id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=17, blank=True, default="")
