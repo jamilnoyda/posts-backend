@@ -37,3 +37,6 @@ add exmaple of curl in this file
 
 
 curl -H "Authorization: Bearer 6suQgkwNdHmYP5YsdBA5IB32MO7KFW" http://localhost:8000/groups/
+
+
+heroku logs --tail -a  posts-backend-python 
