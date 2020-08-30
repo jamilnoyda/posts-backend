@@ -1,0 +1,31 @@
+{
+  "name": "Start on Heroku: Python",
+  "description": "posts backend with python and heroku",
+  "image": "heroku/python",
+  "repository": "https://github.com/jamilnoyda/posts-backend",
+  "keywords": [
+    "python",
+    "django"
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "ckmu$zu_4r#=hyd%(2#ts92ojn)n=lddsr%d^tt7_&ffa+!lk9"
+    },
+    "DATABASE_URL": {
+      "generator": "postgres://vouajfhpqtrbro:2051bad819bfd8ff0977ff1cf08d2268785c04d6eb979ce90196f94d544c1b74@ec2-54-86-57-171.compute-1.amazonaws.com:5432/da382o0ndf3h7r",
+      "description": "The secret key for the Django application."
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}
