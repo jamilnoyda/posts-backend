@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "ckmu$zu_4r#=hyd%(2#ts92ojn)n=lddsr%d^tt7_&ffa+!lk9"
+SECRET_KEY = "will be updated by heroku"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -73,6 +74,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = "posts_backend.wsgi.application"
 
 
@@ -112,7 +115,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = "/static/"
 AUTH_USER_MODEL = "accounts.User"
 
 
@@ -135,5 +137,34 @@ OAUTH2_PROVIDER = {
         "groups": "Access to your groups",
     }
 }
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+    'loggers': {
+        'heroku': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        }
+    }
+}
+import logging
+logger = logging.getLogger("heroku")
+logger.error('Something went wrong!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATIC_URL = "/static/"
+
+
+django_heroku.settings(locals())
+logger.error(django_heroku.settings(locals()))
