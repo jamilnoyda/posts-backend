@@ -22,7 +22,7 @@
     "TEST": {
       "generator": "GTEGS",
       "description": "The secret key for the Django application."
-
+    }
 
 
   },
