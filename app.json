@@ -32,7 +32,7 @@
         "test-setup": "python manage.py collectstatic --noinput",
         "test": "python manage.py test",
         "migrate":"python manage.py migrate",
-        "fixture":"python manage.py loaddata"
+        "fixture":"python manage.py loaddata fixtures/data.json"
         
       }
     }
