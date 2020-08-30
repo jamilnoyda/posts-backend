@@ -1,1 +1,1 @@
-web: gunicorn posts-backend-python.wsgi --log-file -
+web: gunicorn posts_backend.wsgi --log-file -
