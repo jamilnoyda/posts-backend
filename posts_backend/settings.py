@@ -160,7 +160,6 @@ LOGGING = {
 }
 import logging
 logger = logging.getLogger("heroku")
-logger.error('Something went wrong!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -168,4 +167,4 @@ STATIC_URL = "/static/"
 
 
 django_heroku.settings(locals())
-logger.error(django_heroku.settings(locals()))
+logger.error(locals())
