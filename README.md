@@ -28,7 +28,7 @@ The project will be available at 127.0.0.1:8000.
   django 3.x
 
 
-python manage.py dumpdata --format=json > fixtures/data.json 
+python manage.py dumpdata accounts --format=json > fixtures/data.json 
 
 
 
