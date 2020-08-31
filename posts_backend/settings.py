@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 
+import logging
 from pathlib import Path
 import os
 import django_heroku
@@ -158,7 +159,6 @@ LOGGING = {
         }
     }
 }
-import logging
 logger = logging.getLogger("heroku")
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -167,4 +167,4 @@ STATIC_URL = "/static/"
 
 
 django_heroku.settings(locals())
-logger.error(locals())
+# logger.error(locals())
