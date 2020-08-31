@@ -16,24 +16,21 @@
       "generator": "ckmu$zu_4r#=hyd%(2#ts92ojn)n=lddsr%d^tt7_&ffa+!lk9"
     },
     "DATABASE_URL": {
-      "generator": "postgres://vouajfhpqtrbro:2051bad819bfd8ff0977ff1cf08d2268785c04d6eb979ce90196f94d544c1b74@ec2-54-86-57-171.compute-1.amazonaws.com:5432/da382o0ndf3h7r",
+      "generator": "postgres://beievfddjrnazk:b32b795533e54fc60e9dfcf89c6372e46e8fa18608acb1cabf2727ebbffa55ec@ec2-52-202-198-60.compute-1.amazonaws.com:5432/d1ki6vaief5kdb",
       "description": "The secret key for the Django application."
     },
     "TEST": {
       "generator": "GTEGS",
       "description": "The secret key for the Django application."
     }
-
-
   },
   "environments": {
     "test": {
       "scripts": {
         "test-setup": "python manage.py collectstatic --noinput",
-
-        "migrate":"python manage.py migrate",
-        "fixture":"python manage.py loaddata fixtures/data.json"
-        
+        "test": "python manage.py test",
+        "migrate": "python manage.py migrate",
+        "fixture": "python manage.py loaddata fixtures/data.json"
       }
     }
   }
