@@ -26,7 +26,8 @@ The project will be available at 127.0.0.1:8000.
 
  python verstion  python 3.8
   django 3.x
-
+  
+used black for linting
 
 python manage.py dumpdata accounts --format=json > fixtures/data.json 
 
