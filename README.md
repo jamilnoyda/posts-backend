@@ -1,52 +1,49 @@
 # posts-backend
 
 First, clone the repository to your local machine:
+```sh
+$ git clone https://github.com/jamilnoyda/onlineshop.git
+```
 
-git clone https://github.com/jamilnoyda/onlineshop.git
+Install the requirements and migrate:
+```sh
+$ pip install -r requirements.txt --user
+$ python manage.py migrate
+```
 
-Install the requirements:
+For admin login add fixtures:
+```sh
+$ python manage.py loaddata fixtures/data.json
+```
 
-pip install -r requirements.txt --user
-
-python manage.py migrate
-python manage.py runserver
-admin login
-add fixtures:
-python manage.py loaddata fixtures/data.json
-jamilnoyda@gmail.com
-pass: hellohello
-
+**Username:** jamilnoyda@gmail.com
+**Password:** hellohello
 
 Finally, run the development server:
-
-python manage.py runserver
+```sh
+$ python manage.py runserver
+```
 
 The project will be available at 127.0.0.1:8000.
 
-
- python verstion  python 3.8
-  django 3.x
+- python 3.8
+- django 3.x
   
-used black for linting
+Used black for linting
 
-python manage.py dumpdata accounts --format=json > fixtures/data.json 
+```sh
+$ python manage.py dumpdata accounts --format=json > fixtures/data.json
+````
 
+Add example of curl in this file:
+```sh
+$ curl -H "Authorization: Bearer 6suQgkwNdHmYP5YsdBA5IB32MO7KFW" http://localhost:8000/groups/
+```
 
-
-
-add exmaple of curl in this file
-
-
-curl -H "Authorization: Bearer 6suQgkwNdHmYP5YsdBA5IB32MO7KFW" http://localhost:8000/groups/
-
-
-heroku logs --tail -a  posts-backend-python
-
-
- gunicorn posts_backend.wsgi --log-file -
-
-
-
+```sh
+$ heroku logs --tail -a  posts-backend-python
+$ gunicorn posts_backend.wsgi --log-file -
+```
 
 # Python: Getting Started
 
@@ -94,39 +91,36 @@ For more information about using Python on Heroku, see these Dev Center articles
 
 - [Python on Heroku](https://devcenter.heroku.com/categories/python)
 
-
-
-
-
-## only for  deployment
-
+## Only for  deployment
 
 Install the Heroku CLI
 
 Download and install the Heroku CLI.
 
 If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
-
+```sh
 $ heroku login
+```
 
 Clone the repository
 
 Use Git to clone posts-backend-python's source code to your local machine.
-
+```sh
 $ heroku git:clone -a posts-backend-python
 $ cd posts-backend-python
+```
 
 Deploy your changes
 
 Make some changes to the code you just cloned and deploy them to Heroku using Git.
 
+```sh
 $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
+```
 
-
-
-# only for deployment ===dockerhub===
+# Only for deployment ===dockerhub===
 
 Install the Heroku CLI
 
@@ -134,27 +128,35 @@ Download and install the Heroku CLI.
 
 If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 
+```sh
 $ heroku login
+```
 
 Log in to Container Registry
 
-You must have Docker set up locally to continue. You should see output when you run this command.
-
+You must have Docker set up locally to continue. You should see the output when you run this command.
+```sh
 $ docker ps
+```
 
 Now you can sign into Container Registry.
 
+```sh
 $ heroku container:login
+```
 
 Push your Docker-based app
 
 Build the Dockerfile in the current directory and push the Docker image.
 
+```sh
 $ heroku container:push web
+```
 
 Deploy the changes
 
 Release the newly pushed images to deploy your app.
 
+```sh
 $ heroku container:release web
-
+```
