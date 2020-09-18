@@ -2,7 +2,7 @@
 
 First, clone the repository to your local machine:
 ```sh
-$ git clone https://github.com/jamilnoyda/onlineshop.git
+$ git clone https://github.com/jamilnoyda/posts-backend.git
 ```
 
 Install the requirements and migrate:
